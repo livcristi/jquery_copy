@@ -19,7 +19,7 @@ jobs:
         with:
           input_dir: './src'
           title: "Fork of jquery"
-          project_description: "This is the visual analysis for my fork of jquery testing feather-city"
+          project_description: "This is the analysis for my fork of jquery testing feather-city"
           theme: 'light'
           output_dir: 'visual'
           feather_city_version: '0.1.2'
