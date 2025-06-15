@@ -15,7 +15,7 @@ jobs:
           fetch-depth: 0
 
       - name: Run Feather City Analysis
-        uses: livcristi/feather-city-action/typescript@livcristi/other_improvements
+        uses: livcristi/feather-city-action/typescript@v0
         with:
           input_dir: './src'
           title: "Fork of jquery"
