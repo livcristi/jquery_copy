@@ -1,0 +1,28 @@
+name: Feather City Java Analysis
+on:
+  workflow_dispatch:  # Allow manual triggering
+  pull_request:
+  push:
+    branches: [ main, master ]
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run Feather City Analysis
+        uses: livcristi/feather-city-action/typescript@v0
+        with:
+          input_dir: './src'
+          title: "Fork of jquery"
+          project_description: "This is the analysis for my fork of jquery testing feather-city"
+          exclude_directories: "*/test/*"
+          theme: 'light'
+          output_dir: 'visual'
+          color_palette: "oranges"
+          map_depth: "1500"
+          treemap_algorithm: "binary"
